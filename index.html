@@ -141,6 +141,60 @@ canvas{
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
 }
+    /* ================= COMPANY SECTION ================= */
+
+.announcement-section{
+    width:100%;
+}
+
+.company-section{
+    margin-bottom:70px;
+}
+
+.company-title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.company-title h2{
+    font-size:clamp(24px,4vw,36px);
+    color:#0f4cbd;
+    font-weight:700;
+    text-align:center;
+}
+
+.company-line{
+    width:100px;
+    height:4px;
+    border-radius:10px;
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8
+    );
+}
+
+.rsab-section{
+    margin-top:20px;
+    padding-top:50px;
+    border-top:2px dashed #bfdbfe;
+}
+
+.rsab-section .company-title h2{
+    color:#0284c7;
+}
+
+.rsab-section .company-line{
+    background:linear-gradient(
+        90deg,
+        #0284c7,
+        #38bdf8
+    );
+}
+
 
 .card{
     background:white;
@@ -324,151 +378,197 @@ canvas{
 
     <canvas id="bg"></canvas>
 
-    <div class="intro-content">
-        <img class="logo" src="https://karir-production.nos.jkt-1.neo.id/logos/05/9018805/New_Logo_PKSS_-_BIRU.png">
+    <!-- MAIN CONTENT -->
+<main class="main" id="mainContent">
 
-        <h1>
-            Pengumuman Kelulusan<br>
-            Walk In Interview Frontliner & Sekretaris 05 AGUSTUS 2026 <!-- Ubah Judul Sesuai kondisi -->
-        </h1>
+    <div class="container">
 
-        <p>
-            Klik tombol di bawah untuk melihat hasil pengumuman
-        </p>
+        <div class="header">
+            <img src="https://karir-production.nos.jkt-1.neo.id/logos/05/9018805/New_Logo_PKSS_-_BIRU.png">
 
-        <button class="open-btn" id="openBtn">
-            LIHAT PENGUMUMAN
-        </button>
+            <h2>Pengumuman Kelulusan</h2>
+
+            <p>
+                Walk In Interview Frontliner & Sekretaris
+                <br>
+                05 Agustus 2026
+            </p>
+        </div>
+
+        <!-- MASUKKAN BAGIAN DATA KELULUSAN DI SINI -->
+
+        <div class="footer">
+            © 2026 PKSS PEKANBARU - FIAB
+        </div>
+
     </div>
+
+</main>
+
 </section>
 
 <div class="cards">
 
     <!--.......................................... ubah seluruh data berdasarkan kelulusan wawancara......................................................... -->
-  <!-- FRONTLINER -->
-<div class="card">
-    <h3>FRONTLINER</h3>
-    <span>14 Peserta Lulus</span>
+<!-- ================= DATA KELULUSAN ================= -->
 
-    <div class="names">
-        <ul>
-            <li>WIDIA INDRIANI</li>
-            <li>SOHIBUL IKHSAN</li>
-            <li>AULIA SASNI</li>
-            <li>ADINDA NUR HIKMAH</li>
-            <li>FAHKRIA ADIRA PUTRI</li>
-            <li>FIRMANSYAH JANUARDI</li>
-            <li>SALSA BILA</li>
-            <li>NUR AYUNI DEVIA WANI</li>
-            <li>OSENA TAMARA BELA</li>
-            <li>ALIFA NADYA INDRIADI</li>
-            <li>RADEF OKTAPTI SAPUTRA</li>
-            <li>VIRENDRA REAZI FADILLAH</li>
-            <li>FARUR RAHMAN</li>
-            <li>NADHIENA HAYU FARISHA</li>
-        </ul>
+<div class="announcement-section">
+
+    <!-- ================= BRI ================= -->
+    <div class="company-section">
+        <div class="company-title">
+            <span class="company-line"></span>
+            <h2>BRI</h2>
+            <span class="company-line"></span>
+        </div>
+
+        <div class="cards">
+
+            <!-- FRONTLINER -->
+            <div class="card">
+                <h3>FRONTLINER</h3>
+                <span>14 Peserta Lulus</span>
+
+                <div class="names">
+                    <ul>
+                        <li>WIDIA INDRIANI</li>
+                        <li>SOHIBUL IKHSAN</li>
+                        <li>AULIA SASNI</li>
+                        <li>ADINDA NUR HIKMAH</li>
+                        <li>FAHKRIA ADIRA PUTRI</li>
+                        <li>FIRMANSYAH JANUARDI</li>
+                        <li>SALSA BILA</li>
+                        <li>NUR AYUNI DEVIA WANI</li>
+                        <li>OSENA TAMARA BELA</li>
+                        <li>ALIFA NADYA INDRIADI</li>
+                        <li>RADEF OKTAPTI SAPUTRA</li>
+                        <li>VIRENDRA REAZI FADILLAH</li>
+                        <li>FARUR RAHMAN</li>
+                        <li>NADHIENA HAYU FARISHA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BFA -->
+            <div class="card">
+                <h3>BFA</h3>
+                <span>14 Peserta Lulus</span>
+
+                <div class="names">
+                    <ul>
+                        <li>WISKA LIANA RIADI PUTRI</li>
+                        <li>WULAN SEPTIA ADRA</li>
+                        <li>AYUN DINA SAPUTRI S</li>
+                        <li>EVI SURYANI</li>
+                        <li>NUNA MARDIANTI</li>
+                        <li>FARAH NABILA</li>
+                        <li>DEA OLIVIA</li>
+                        <li>MUTIARA NATASYA</li>
+                        <li>WINDI FAHRA JUITA</li>
+                        <li>MELANI NINGRUM</li>
+                        <li>VARISA SALSABILA</li>
+                        <li>DINIYA RAMADHANTI</li>
+                        <li>NUR AINI</li>
+                        <li>MUTIA ANDRIANA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FIELD COLLECTION -->
+            <div class="card">
+                <h3>FIELD COLLECTION</h3>
+                <span>2 Peserta Lulus</span>
+
+                <div class="names">
+                    <ul>
+                        <li>MIKHAEL FERNANDO LIMBONG</li>
+                        <li>HERIANSYAH</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SALES OFFICER KREDIT -->
+            <div class="card">
+                <h3>SALES OFFICER KREDIT</h3>
+                <span>1 Peserta Lulus</span>
+
+                <div class="names">
+                    <ul>
+                        <li>REGITA PUTRI NABILA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SEKRETARIS -->
+            <div class="card">
+                <h3>SEKRETARIS</h3>
+                <span>1 Peserta Lulus</span>
+
+                <div class="names">
+                    <ul>
+                        <li>SALSABILLA RAMADHAN</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PPBK -->
+            <div class="card">
+                <h3>PPBK</h3>
+                <span>1 Peserta Lulus</span>
+
+                <div class="names">
+                    <ul>
+                        <li>M MALIK ABRAR</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ADMIN KREDIT -->
+            <div class="card">
+                <h3>ADMIN KREDIT</h3>
+                <span>1 Peserta Lulus</span>
+
+                <div class="names">
+                    <ul>
+                        <li>MELJA DWI SAFIRA</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </div>
+
+
+    <!-- ================= RS AWAL BROS ================= -->
+    <div class="company-section rsab-section">
+
+        <div class="company-title">
+            <span class="company-line"></span>
+            <h2>RS AWAL BROS</h2>
+            <span class="company-line"></span>
+        </div>
+
+        <div class="cards">
+
+            <!-- ADMIN RSAB -->
+            <div class="card">
+                <h3>ADMIN RSAB</h3>
+                <span>3 Peserta Lulus</span>
+
+                <div class="names">
+                    <ul>
+                        <li>VIVIAN PUTRIANI DEFRIZON</li>
+                        <li>CUT PASHA DWI MUTIARA</li>
+                        <li>AZYMATUS SAFIRA</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
-<!-- BFA -->
-<div class="card">
-    <h3>BFA</h3>
-    <span>14 Peserta Lulus</span>
-
-    <div class="names">
-        <ul>
-            <li>WISKA LIANA RIADI PUTRI</li>
-            <li>WULAN SEPTIA ADRA</li>
-            <li>AYUN DINA SAPUTRI S</li>
-            <li>EVI SURYANI</li>
-            <li>NUNA MARDIANTI</li>
-            <li>FARAH NABILA</li>
-            <li>DEA OLIVIA</li>
-            <li>MUTIARA NATASYA</li>
-            <li>WINDI FAHRA JUITA</li>
-            <li>MELANI NINGRUM</li>
-            <li>VARISA SALSABILA</li>
-            <li>DINIYA RAMADHANTI</li>
-            <li>NUR AINI</li>
-            <li>MUTIA ANDRIANA</li>
-        </ul>
-    </div>
-</div>
-
-<!-- FIELD COLLECTION -->
-<div class="card">
-    <h3>FIELD COLLECTION</h3>
-    <span>2 Peserta Lulus</span>
-
-    <div class="names">
-        <ul>
-            <li>MIKHAEL FERNANDO LIMBONG</li>
-            <li>HERIANSYAH</li>
-        </ul>
-    </div>
-</div>
-
-<!-- SALES OFFICER KREDIT -->
-<div class="card">
-    <h3>SALES OFFICER KREDIT</h3>
-    <span>1 Peserta Lulus</span>
-
-    <div class="names">
-        <ul>
-            <li>REGITA PUTRI NABILA</li>
-        </ul>
-    </div>
-</div>
-
-<!-- SEKRETARIS -->
-<div class="card">
-    <h3>SEKRETARIS</h3>
-    <span>1 Peserta Lulus</span>
-
-    <div class="names">
-        <ul>
-            <li>SALSABILLA RAMADHAN</li>
-        </ul>
-    </div>
-</div>
-
-<!-- PPBK -->
-<div class="card">
-    <h3>PPBK</h3>
-    <span>1 Peserta Lulus</span>
-
-    <div class="names">
-        <ul>
-            <li>M MALIK ABRAR</li>
-        </ul>
-    </div>
-</div>
-
-<!-- ADMIN KREDIT -->
-<div class="card">
-    <h3>ADMIN KREDIT</h3>
-    <span>1 Peserta Lulus</span>
-
-    <div class="names">
-        <ul>
-            <li>MELJA DWI SAFIRA</li>
-        </ul>
-    </div>
-</div>
-
-<!-- ADMIN RSAB -->
-<div class="card">
-    <h3>ADMIN RSAB</h3>
-    <span>3 Peserta Lulus</span>
-
-    <div class="names">
-        <ul>
-            <li>VIVIAN PUTRIANI DEFRIZON</li>
-            <li>CUT PASHA DWI MUTIARA</li>
-            <li>AZYMATUS SAFIRA</li>
-        </ul>
-    </div>
-</div>
   <!--.................................................................. Batas Untuk data pengumuman........................................................................... -->
 </div>
 
