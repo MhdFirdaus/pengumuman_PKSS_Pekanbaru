@@ -424,6 +424,225 @@ canvas {
 </style>
 </head>
 
+<script>
+// ANIMASI PEMBUKA
+const openBtn = document.getElementById("openBtn");
+const intro = document.getElementById("intro");
+const main = document.getElementById("mainContent");
+
+openBtn.addEventListener("click", () => {
+    intro.classList.add("reveal");
+
+    setTimeout(() => {
+        intro.style.display = "none";
+        main.style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }, 1200);
+});
+
+// KARTU POSISI: BUKA/TUTUP DAFTAR NAMA
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        const names = card.querySelector(".names");
+
+        document.querySelectorAll(".names").forEach(item => {
+            if (item !== names) {
+                item.style.display = "none";
+            }
+        });
+
+        names.style.display =
+            names.style.display === "block" ? "none" : "block";
+    });
+});
+
+// ANIMASI PARTIKEL
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 4 + 1;
+        this.dx = (Math.random() - 0.5) * 1;
+        this.dy = (Math.random() - 0.5) * 1;
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(
+            this.x,
+            this.y,
+            this.radius,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle = "rgba(255,255,255,0.7)";
+        ctx.fill();
+    }
+
+    update() {
+        this.x += this.dx;
+        this.y += this.dy;
+
+        if (this.x < 0 || this.x > canvas.width) {
+            this.dx *= -1;
+        }
+
+        if (this.y < 0 || this.y > canvas.height) {
+            this.dy *= -1;
+        }
+
+        this.draw();
+    }
+}
+
+// MEMBUAT PARTIKEL
+for (let i = 0; i < 120; i++) {
+    particles.push(new Particle());
+}
+
+// MENJALANKAN ANIMASI
+function animate() {
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    particles.forEach(particle => particle.update());
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+// MENYESUAIKAN UKURAN LAYAR
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+// ================= MUSIK LONG LIVE =================
+
+// File MP3 harus berada satu folder dengan index.html
+const bgMusic = document.getElementById("bgMusic");
+const musicToggle = document.getElementById("musicToggle");
+const musicLabel = document.getElementById("musicLabel");
+
+function updateMusicButton(isPlaying) {
+    musicToggle.classList.toggle("is-playing", isPlaying);
+
+    musicToggle.setAttribute(
+        "aria-pressed",
+        String(isPlaying)
+    );
+
+    musicToggle.setAttribute(
+        "aria-label",
+        isPlaying ? "Jeda musik" : "Putar musik"
+    );
+
+    musicLabel.textContent =
+        isPlaying ? "Jeda Musik" : "Putar Musik";
+}
+
+// TOMBOL PLAY / PAUSE
+musicToggle.addEventListener("click", async () => {
+
+    if (bgMusic.paused) {
+
+        try {
+            await bgMusic.play();
+            updateMusicButton(true);
+
+        } catch (error) {
+
+            musicLabel.textContent = "Periksa File MP3";
+            updateMusicButton(false);
+
+            console.warn(
+                "Musik belum dapat diputar:",
+                error
+            );
+        }
+
+    } else {
+
+        bgMusic.pause();
+        updateMusicButton(false);
+
+    }
+});
+
+// MUSIK DICOBA DIPUTAR SAAT TOMBOL PEMBUKA DIKLIK
+openBtn.addEventListener("click", async () => {
+
+    try {
+
+        await bgMusic.play();
+        updateMusicButton(true);
+
+    } catch (error) {
+
+        updateMusicButton(false);
+
+    }
+
+});
+
+// SINKRONISASI STATUS MUSIK
+bgMusic.addEventListener("play", () => {
+    updateMusicButton(true);
+});
+
+bgMusic.addEventListener("pause", () => {
+    updateMusicButton(false);
+});
+
+bgMusic.addEventListener("ended", () => {
+    updateMusicButton(false);
+});
+</script>
+
+<!-- MUSIK LATAR -->
+<audio id="bgMusic" preload="none" loop>
+    <source
+        src="long-live-taylor-swift.mp3"
+        type="audio/mpeg"
+    >
+    Browser Anda tidak mendukung pemutar audio.
+</audio>
+
+<!-- TOMBOL MUSIK -->
+<button
+    id="musicToggle"
+    class="music-toggle"
+    type="button"
+    aria-label="Putar musik"
+    aria-pressed="false"
+>
+    <span class="music-icon">♫</span>
+    <span id="musicLabel">Putar Musik</span>
+</button>
+
+</body>
+</html>
+
 <body>
 
 <!-- INTRO -->
