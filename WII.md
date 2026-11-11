@@ -442,7 +442,7 @@ canvas {
             <br>
             Walk In Interview Kantor PKSS Pekanbaru
             <br>
-            <span>Rabu, 11 November 2026</span>
+            <span>11 November 2026</span>
         </h1>
 
         <p>
@@ -471,7 +471,7 @@ canvas {
             <p>
                 Walk In Interview Kantor PKSS Pekanbaru
                 <br>
-                Rabu, 11 November 2026
+                11 November 2026
             </p>
         </div>
 
