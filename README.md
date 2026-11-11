@@ -661,7 +661,7 @@ bgMusic.addEventListener("ended", () => {
             <br>
             Walk In Interview Kantor PKSS Pekanbaru
             <br>
-            <span>04 November 2026</span>
+            <span>11 November 2026</span>
         </h1>
 
         <p>
@@ -690,7 +690,7 @@ bgMusic.addEventListener("ended", () => {
             <p>
                 Walk In Interview Kantor PKSS Pekanbaru
                 <br>
-                04 November 2026
+                11 November 2026
             </p>
         </div>
 
@@ -707,87 +707,192 @@ bgMusic.addEventListener("ended", () => {
             </div>
 
             <!-- BRI -->
-            <div class="company-section">
-                <div class="company-title">
-                    <span class="company-line"></span>
-                    <h2>BRI</h2>
-                    <span class="company-line"></span>
-                </div>
+           
+<!-- ================= BRI ================= -->
+<div class="company-section">
 
-                <div class="cards">
+    <div class="company-title">
+        <span class="company-line"></span>
+        <h2>BRI</h2>
+        <span class="company-line"></span>
+    </div>
 
-                    <div class="card">
-                        <h3>FRONTLINER</h3>
-                        <span>5 Peserta</span>
-                        <div class="names">
-                            <ul>
-                                <li>Mutiara Cinthia</li>
-                                <li>Herianto</li>
-                                <li>Mesi Sari</li>
-                                <li>Anggun Widya Sari</li>
-                                <li>Muhammad Arif Daniel</li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="cards">
 
-                    <div class="card">
-                        <h3>FIELD COLLECTION</h3>
-                        <span>3 Peserta</span>
-                        <div class="names">
-                            <ul>
-                                <li>Rika Zahera</li>
-                                <li>Roby Andre Pamungkas</li>
-                                <li>Vasco Mario Namara</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3>BFA</h3>
-                        <span>3 Peserta</span>
-                        <div class="names">
-                            <ul>
-                                <li>Nisa Safawati</li>
-                                <li>Putri Ayu Mentari</li>
-                                <li>Muhammad Alvira Saputra AB</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3>CBA</h3>
-                        <span>2 Peserta</span>
-                        <div class="names">
-                            <ul>
-                                <li>Febby Febriani</li>
-                                <li>Rara Mulyunika</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+        <!-- FRONTLINER -->
+        <div class="card">
+            <h3>FRONTLINER</h3>
+            <span>19 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Aliya Atika Yunaiza</li>
+                    <li>Adinda Thania Salsabilla</li>
+                    <li>Maria Krisanta Simanjuntak</li>
+                    <li>Anggriani Lumban Gaol</li>
+                    <li>Ghina Raudhatul Jannah</li>
+                    <li>Nani Triani</li>
+                    <li>Muhammad Naufal Fitro</li>
+                    <li>Trie Helza Wahyuni</li>
+                    <li>Hernida</li>
+                    <li>Intan Fadhilah</li>
+                    <li>Melisa Febriana</li>
+                    <li>Auliyaa Adzka</li>
+                    <li>Putri Pramudita</li>
+                    <li>Aulia Atika Putri</li>
+                    <li>Yesiva Azahra</li>
+                    <li>Dilla Salsabila</li>
+                    <li>Efal Jovanda Tarigan</li>
+                    <li>Revi Okdayni Asna</li>
+                    <li>Uchie</li>
+                </ul>
             </div>
+        </div>
 
-            <!-- RS AWAL BROS -->
-            <div class="rsab-section">
-                <div class="company-title">
-                    <span class="company-line"></span>
-                    <h2>RS AWAL BROS</h2>
-                    <span class="company-line"></span>
-                </div>
-
-                <div class="cards">
-                    <div class="card">
-                        <h3>ADMISSION</h3>
-                        <span>1 Peserta</span>
-                        <div class="names">
-                            <ul>
-                                <li>Raja Taufik Hidayat</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <!-- BFA -->
+        <div class="card">
+            <h3>BFA</h3>
+            <span>28 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Diniyah Ramadhanti</li>
+                    <li>Mutia Rifky Ananda</li>
+                    <li>Wafiq Azizah</li>
+                    <li>Sefri Ulfadmi</li>
+                    <li>Finta Kurnia</li>
+                    <li>Lina Nurul Arifah</li>
+                    <li>Angelin H. Grace Situmorang</li>
+                    <li>Widya Rahma Yani</li>
+                    <li>Soniya Yuniarni</li>
+                    <li>Zuriah Hasanah Putri</li>
+                    <li>Suci Advirahmadini</li>
+                    <li>Elva Sitorus</li>
+                    <li>Ira Melani Br. Marpaung</li>
+                    <li>Nurul Addinni</li>
+                    <li>Adinda Maharani</li>
+                    <li>Tasya Nurhayati</li>
+                    <li>Nurul Nabilla</li>
+                    <li>Dede Sunarti</li>
+                    <li>Amanda Hafidza</li>
+                    <li>Riri Raudhatul Azmi</li>
+                    <li>Sri Bunga Wahyu Nengsih</li>
+                    <li>Wulan Safitri</li>
+                    <li>Dini Sakinah</li>
+                    <li>Shasya Malika Zahra</li>
+                    <li>Melia Yunanda</li>
+                    <li>Rahmi Hayati</li>
+                    <li>Sidratul Saddegh Nazief</li>
+                    <li>Yola Sephiana</li>
+                </ul>
             </div>
+        </div>
+
+        <!-- CBA -->
+        <div class="card">
+            <h3>CBA</h3>
+            <span>6 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Ervina Agustia Misya</li>
+                    <li>Sri Ayu Ramadhani</li>
+                    <li>Eka Wahyu Ningsih</li>
+                    <li>Wina Salsabila</li>
+                    <li>Tika Kristin Marbun</li>
+                    <li>Anisa Santika</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FIELD COLLECTION -->
+        <div class="card">
+            <h3>FIELD COLLECTION</h3>
+            <span>4 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Muhammad Arief Setiawan</li>
+                    <li>Khairul Amri</li>
+                    <li>Tania Afrina</li>
+                    <li>M.Sabtu Hadi Martasena Ulpani</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ================= RS AWAL BROS ================= -->
+<div class="rsab-section">
+
+    <div class="company-title">
+        <span class="company-line"></span>
+        <h2>RS AWAL BROS</h2>
+        <span class="company-line"></span>
+    </div>
+
+    <div class="cards">
+
+        <!-- ADMISSION -->
+        <div class="card">
+            <h3>ADMISSION</h3>
+            <span>4 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Nindi Bunga Iqnas</li>
+                    <li>Muhammad Syafi'i</li>
+                    <li>Isra Mulyani</li>
+                    <li>Nazhifah Al-Adawiyah Tenrisau</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- DISTRIBUSI GIZI -->
+        <div class="card">
+            <h3>DISTRIBUSI GIZI</h3>
+            <span>3 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Sri Wulandari</li>
+                    <li>Fayqha Ashifa Irawan</li>
+                    <li>Silviana</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ADMIN MCU -->
+        <div class="card">
+            <h3>ADMIN MCU</h3>
+            <span>1 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Putri Andriani Br Galingging</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ADMINISTRASI -->
+        <div class="card">
+            <h3>ADMINISTRASI</h3>
+            <span>1 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Mutia Andiva</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NURSE AID -->
+        <div class="card">
+            <h3>NURSE AID</h3>
+            <span>1 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Gustira Endani</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
 
             <!-- FOOTER -->
             <div class="footer">
