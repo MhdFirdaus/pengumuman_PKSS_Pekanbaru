@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pengumuman Kelulusan PKSS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --pkss-navy: #071b36;
+    --pkss-blue: #0756a6;
+    --pkss-orange: #ff8a1f;
+    --pkss-black: #111827;
+}
+
+body {
+    overflow-x: hidden;
+    background: #f3f6fa;
+    color: var(--pkss-black);
+}
+
+/* INTRO */
+#intro {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 15%, #ff8a1f33, transparent 28%),
+        radial-gradient(circle at 85% 85%, #1685d533, transparent 30%),
+        linear-gradient(135deg, #06152b, #084783 58%, #071b36);
+    z-index: 9999;
+    overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 160px;
+    margin-bottom: 25px;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.3));
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.intro-content h1 {
+    color: white;
+    max-width: 900px;
+    font-size: clamp(24px, 4vw, 48px);
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.intro-content h1 span {
+    color: #ffad55;
+}
+
+.intro-content p {
+    color: #dbeafe;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* BUTTON */
+.open-btn {
+    padding: 18px 40px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff8a1f, #ffb04a);
+    color: #111827;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 12px 30px #ff8a1f55;
+}
+
+.open-btn:hover {
+    transform: scale(1.05);
+    background: #ffc078;
+}
+
+/* MAIN */
+.main {
+    min-height: 100vh;
+    padding: 60px 20px 80px;
+    display: none;
+    background: linear-gradient(
+        180deg,
+        #eaf2fb 0,
+        #f7f9fc 360px,
+        #f3f6fa 100%
+    );
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header img {
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: clamp(24px, 4vw, 42px);
+    color: var(--pkss-navy);
+    margin-bottom: 15px;
+}
+
+.header p {
+    color: #475569;
+    font-size: 18px;
+}
+
+/* ANNOUNCEMENT */
+.announcement-section {
+    width: 100%;
+}
+
+.notice {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    padding: 20px 24px;
+    background: #fff;
+    border-left: 5px solid var(--pkss-orange);
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(7,27,54,.08);
+    color: #475569;
+    line-height: 1.8;
+}
+
+.notice strong {
+    color: var(--pkss-navy);
+}
+
+.company-section {
+    margin-bottom: 70px;
+}
+
+.company-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.company-title h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    color: var(--pkss-blue);
+    font-weight: 700;
+    text-align: center;
+}
+
+.company-line {
+    width: 100px;
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--pkss-orange), var(--pkss-blue));
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e3eaf2;
+    border-radius: 18px;
+    padding: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 10px 28px #071b3610;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(
+        90deg,
+        #0756a6 0%,
+        #1685d5 58%,
+        #ff8a1f 100%
+    );
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.card h3 {
+    color: var(--pkss-navy);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card span {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.names {
+    margin-top: 25px;
+    display: none;
+    animation: fade 0.5s ease;
+}
+
+.names ul {
+    list-style: none;
+}
+
+.names li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: #eef4fa;
+    border-left: 3px solid #ff9a36;
+    border-radius: 12px;
+    color: var(--pkss-black);
+    transition: 0.3s;
+}
+
+.names li:hover {
+    transform: translateX(5px);
+    background: #dceafa;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RS AWAL BROS */
+.rsab-section {
+    margin-top: 20px;
+    padding-top: 50px;
+    border-top: 2px dashed #c5d4e3;
+}
+
+.rsab-section .company-title h2 {
+    color: var(--pkss-navy);
+}
+
+.rsab-section .company-line {
+    background: linear-gradient(90deg, var(--pkss-orange), var(--pkss-blue));
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    background: var(--pkss-navy);
+    color: #dbeafe;
+    border-top: 4px solid var(--pkss-orange);
+    padding: 22px;
+    border-radius: 14px;
+    font-size: 15px;
+}
+
+/* INTRO REVEAL */
+.reveal {
+    animation: reveal 1.4s forwards ease-in-out;
+}
+
+@keyframes reveal {
+    0% {
+        clip-path: circle(100% at center);
+        opacity: 1;
+    }
+    100% {
+        clip-path: circle(0% at center);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 70px;
+    height: 70px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 38px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(37,211,102,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+    }
+}
+
+.wa-text {
+    position: fixed;
+    right: 25px;
+    bottom: 105px;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pkss-navy);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    line-height: 1.5;
+    z-index: 999;
+    animation: bounceText 2s infinite;
+}
+
+@keyframes bounceText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .card {
+        padding: 25px;
+    }
+
+    .intro-content p {
+        font-size: 15px;
+    }
+
+    .company-title {
+        gap: 10px;
+    }
+
+    .company-line {
+        width: 50px;
+    }
+
+    .whatsapp-float {
+        width: 58px;
+        height: 58px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .whatsapp-float img {
+        width: 32px;
+    }
+
+    .wa-text {
+        right: 18px;
+        bottom: 88px;
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<section id="intro">
+    <canvas id="bg"></canvas>
+
+    <div class="intro-content">
+        <img
+            class="logo"
+            src="https://karir-production.nos.jkt-1.neo.id/logos/05/9018805/New_Logo_PKSS_-_BIRU.png"
+            alt="Logo PKSS"
+        >
+
+        <h1>
+            Pengumuman Kelulusan
+            <br>
+            Walk In Interview Kantor PKSS Pekanbaru
+            <br>
+            <span>11 November 2026</span>
+        </h1>
+
+        <p>
+            Selamat kepada peserta yang lolos seleksi.
+            Klik tombol di bawah untuk melihat hasil pengumuman.
+        </p>
+
+        <button class="open-btn" id="openBtn">
+            LIHAT PENGUMUMAN
+        </button>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="main" id="mainContent">
+    <div class="container">
+
+        <div class="header">
+            <img
+                src="https://karir-production.nos.jkt-1.neo.id/logos/05/9018805/New_Logo_PKSS_-_BIRU.png"
+                alt="Logo PKSS"
+            >
+
+            <h2>Pengumuman Kelulusan</h2>
+
+            <p>
+                Walk In Interview Kantor PKSS Pekanbaru
+                <br>
+                11 November 2026
+            </p>
+        </div>
+
+        <div class="announcement-section">
+
+            <div class="notice">
+                <strong>Selamat kepada peserta yang dinyatakan lolos!</strong>
+                <br>
+                Terima kasih atas partisipasi dan antusiasme Anda
+                dalam mengikuti proses Walk In Interview. Silakan klik
+                kartu posisi untuk melihat nama peserta yang lolos.
+                Informasi tahapan selanjutnya akan disampaikan melalui
+                komunikasi resmi tim rekrutmen PKSS.
+            </div>
+
+            <!-- BRI -->
+            
+<!-- ================= BRI ================= -->
+<div class="company-section">
+
+    <div class="company-title">
+        <span class="company-line"></span>
+        <h2>BRI</h2>
+        <span class="company-line"></span>
+    </div>
+
+    <div class="cards">
+
+        <!-- FRONTLINER -->
+        <div class="card">
+            <h3>FRONTLINER</h3>
+            <span>19 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Aliya Atika Yunaiza</li>
+                    <li>Adinda Thania Salsabilla</li>
+                    <li>Maria Krisanta Simanjuntak</li>
+                    <li>Anggriani Lumban Gaol</li>
+                    <li>Ghina Raudhatul Jannah</li>
+                    <li>Nani Triani</li>
+                    <li>Muhammad Naufal Fitro</li>
+                    <li>Trie Helza Wahyuni</li>
+                    <li>Hernida</li>
+                    <li>Intan Fadhilah</li>
+                    <li>Melisa Febriana</li>
+                    <li>Auliyaa Adzka</li>
+                    <li>Putri Pramudita</li>
+                    <li>Aulia Atika Putri</li>
+                    <li>Yesiva Azahra</li>
+                    <li>Dilla Salsabila</li>
+                    <li>Efal Jovanda Tarigan</li>
+                    <li>Revi Okdayni Asna</li>
+                    <li>Uchie</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BFA -->
+        <div class="card">
+            <h3>BFA</h3>
+            <span>28 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Diniyah Ramadhanti</li>
+                    <li>Mutia Rifky Ananda</li>
+                    <li>Wafiq Azizah</li>
+                    <li>Sefri Ulfadmi</li>
+                    <li>Finta Kurnia</li>
+                    <li>Lina Nurul Arifah</li>
+                    <li>Angelin H. Grace Situmorang</li>
+                    <li>Widya Rahma Yani</li>
+                    <li>Soniya Yuniarni</li>
+                    <li>Zuriah Hasanah Putri</li>
+                    <li>Suci Advirahmadini</li>
+                    <li>Elva Sitorus</li>
+                    <li>Ira Melani Br. Marpaung</li>
+                    <li>Nurul Addinni</li>
+                    <li>Adinda Maharani</li>
+                    <li>Tasya Nurhayati</li>
+                    <li>Nurul Nabilla</li>
+                    <li>Dede Sunarti</li>
+                    <li>Amanda Hafidza</li>
+                    <li>Riri Raudhatul Azmi</li>
+                    <li>Sri Bunga Wahyu Nengsih</li>
+                    <li>Wulan Safitri</li>
+                    <li>Dini Sakinah</li>
+                    <li>Shasya Malika Zahra</li>
+                    <li>Melia Yunanda</li>
+                    <li>Rahmi Hayati</li>
+                    <li>Sidratul Saddegh Nazief</li>
+                    <li>Yola Sephiana</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CBA -->
+        <div class="card">
+            <h3>CBA</h3>
+            <span>6 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Ervina Agustia Misya</li>
+                    <li>Sri Ayu Ramadhani</li>
+                    <li>Eka Wahyu Ningsih</li>
+                    <li>Wina Salsabila</li>
+                    <li>Tika Kristin Marbun</li>
+                    <li>Anisa Santika</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FIELD COLLECTION -->
+        <div class="card">
+            <h3>FIELD COLLECTION</h3>
+            <span>4 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Muhammad Arief Setiawan</li>
+                    <li>Khairul Amri</li>
+                    <li>Tania Afrina</li>
+                    <li>M.Sabtu Hadi Martasena Ulpani</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ================= RS AWAL BROS ================= -->
+<div class="rsab-section">
+
+    <div class="company-title">
+        <span class="company-line"></span>
+        <h2>RS AWAL BROS</h2>
+        <span class="company-line"></span>
+    </div>
+
+    <div class="cards">
+
+        <!-- ADMISSION -->
+        <div class="card">
+            <h3>ADMISSION</h3>
+            <span>4 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Nindi Bunga Iqnas</li>
+                    <li>Muhammad Syafi'i</li>
+                    <li>Isra Mulyani</li>
+                    <li>Nazhifah Al-Adawiyah Tenrisau</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- DISTRIBUSI GIZI -->
+        <div class="card">
+            <h3>DISTRIBUSI GIZI</h3>
+            <span>3 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Sri Wulandari</li>
+                    <li>Fayqha Ashifa Irawan</li>
+                    <li>Silviana</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ADMIN MCU -->
+        <div class="card">
+            <h3>ADMIN MCU</h3>
+            <span>1 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Putri Andriani Br Galingging</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ADMINISTRASI -->
+        <div class="card">
+            <h3>ADMINISTRASI</h3>
+            <span>1 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Mutia Andiva</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NURSE AID -->
+        <div class="card">
+            <h3>NURSE AID</h3>
+            <span>1 Peserta</span>
+            <div class="names">
+                <ul>
+                    <li>Gustira Endani</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <!-- FOOTER -->
+            <div class="footer">
+                © 2026 <strong>PKSS PEKANBARU</strong>
+                – Informasi Kelulusan Walk In Interview
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script>
+// ANIMASI PEMBUKA
+const openBtn = document.getElementById("openBtn");
+const intro = document.getElementById("intro");
+const main = document.getElementById("mainContent");
+
+openBtn.addEventListener("click", () => {
+    intro.classList.add("reveal");
+
+    setTimeout(() => {
+        intro.style.display = "none";
+        main.style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }, 1200);
+});
+
+// KARTU POSISI: BUKA/TUTUP DAFTAR NAMA
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        const names = card.querySelector(".names");
+
+        document.querySelectorAll(".names").forEach(item => {
+            if (item !== names) {
+                item.style.display = "none";
+            }
+        });
+
+        names.style.display =
+            names.style.display === "block" ? "none" : "block";
+    });
+});
+
+// ANIMASI PARTIKEL
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 4 + 1;
+        this.dx = (Math.random() - 0.5) * 1;
+        this.dy = (Math.random() - 0.5) * 1;
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(
+            this.x,
+            this.y,
+            this.radius,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle = "rgba(255,255,255,0.7)";
+        ctx.fill();
+    }
+
+    update() {
+        this.x += this.dx;
+        this.y += this.dy;
+
+        if (this.x < 0 || this.x > canvas.width) {
+            this.dx *= -1;
+        }
+
+        if (this.y < 0 || this.y > canvas.height) {
+            this.dy *= -1;
+        }
+
+        this.draw();
+    }
+}
+
+// MEMBUAT PARTIKEL
+for (let i = 0; i < 120; i++) {
+    particles.push(new Particle());
+}
+
+// MENJALANKAN ANIMASI
+function animate() {
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    particles.forEach(particle => particle.update());
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+// MENYESUAIKAN UKURAN LAYAR
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>
