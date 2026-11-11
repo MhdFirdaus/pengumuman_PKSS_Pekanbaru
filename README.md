@@ -1,14 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pengumuman Kelulusan PKSS</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +30,7 @@ body {
     color: var(--pkss-black);
 }
 
-/* INTRO */
+/* ================= INTRO ================= */
 #intro {
     position: fixed;
     inset: 0;
@@ -92,7 +93,7 @@ canvas {
     margin-bottom: 40px;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 .open-btn {
     padding: 18px 40px;
     border: none;
@@ -111,7 +112,7 @@ canvas {
     background: #ffc078;
 }
 
-/* MAIN */
+/* ================= MAIN ================= */
 .main {
     min-height: 100vh;
     padding: 60px 20px 80px;
@@ -150,7 +151,7 @@ canvas {
     font-size: 18px;
 }
 
-/* ANNOUNCEMENT */
+/* ================= ANNOUNCEMENT ================= */
 .announcement-section {
     width: 100%;
 }
@@ -197,7 +198,7 @@ canvas {
     background: linear-gradient(90deg, var(--pkss-orange), var(--pkss-blue));
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -282,7 +283,7 @@ canvas {
     }
 }
 
-/* RS AWAL BROS */
+/* ================= RS AWAL BROS ================= */
 .rsab-section {
     margin-top: 20px;
     padding-top: 50px;
@@ -297,7 +298,7 @@ canvas {
     background: linear-gradient(90deg, var(--pkss-orange), var(--pkss-blue));
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 .footer {
     text-align: center;
     margin-top: 60px;
@@ -309,7 +310,7 @@ canvas {
     font-size: 15px;
 }
 
-/* INTRO REVEAL */
+/* ================= REVEAL ================= */
 .reveal {
     animation: reveal 1.4s forwards ease-in-out;
 }
@@ -326,7 +327,7 @@ canvas {
     }
 }
 
-/* WHATSAPP FLOAT */
+/* ================= WHATSAPP FLOAT ================= */
 .whatsapp-float {
     position: fixed;
     right: 25px;
@@ -385,7 +386,7 @@ canvas {
     50% { transform: translateY(-5px); }
 }
 
-/* RESPONSIVE */
+/* ================= MOBILE ================= */
 @media (max-width: 600px) {
     .card {
         padding: 25px;
@@ -425,7 +426,7 @@ canvas {
 
 <body>
 
-<!-- INTRO -->
+<!-- ================= INTRO ================= -->
 <section id="intro">
     <canvas id="bg"></canvas>
 
@@ -441,7 +442,7 @@ canvas {
             <br>
             Walk In Interview Kantor PKSS Pekanbaru
             <br>
-            <span>11 November 2026</span>
+            <span>04 November 2026</span>
         </h1>
 
         <p>
@@ -455,7 +456,7 @@ canvas {
     </div>
 </section>
 
-<!-- MAIN CONTENT -->
+<!-- ================= MAIN CONTENT ================= -->
 <main class="main" id="mainContent">
     <div class="container">
 
@@ -470,7 +471,7 @@ canvas {
             <p>
                 Walk In Interview Kantor PKSS Pekanbaru
                 <br>
-                11 November 2026
+                04 November 2026
             </p>
         </div>
 
@@ -486,195 +487,90 @@ canvas {
                 komunikasi resmi tim rekrutmen PKSS.
             </div>
 
-            <!-- BRI -->
-            
-<!-- ================= BRI ================= -->
-<div class="company-section">
+            <!-- ================= BRI ================= -->
+            <div class="company-section">
+                <div class="company-title">
+                    <span class="company-line"></span>
+                    <h2>BRI</h2>
+                    <span class="company-line"></span>
+                </div>
 
-    <div class="company-title">
-        <span class="company-line"></span>
-        <h2>BRI</h2>
-        <span class="company-line"></span>
-    </div>
+                <div class="cards">
 
-    <div class="cards">
+                    <div class="card">
+                        <h3>FRONTLINER</h3>
+                        <span>5 Peserta</span>
+                        <div class="names">
+                            <ul>
+                                <li>Mutiara Cinthia</li>
+                                <li>Herianto</li>
+                                <li>Mesi Sari</li>
+                                <li>Anggun Widya Sari</li>
+                                <li>Muhammad Arif Daniel</li>
+                            </ul>
+                        </div>
+                    </div>
 
-        <!-- FRONTLINER -->
-        <div class="card">
-            <h3>FRONTLINER</h3>
-            <span>19 Peserta</span>
-            <div class="names">
-                <ul>
-                    <li>Aliya Atika Yunaiza</li>
-                    <li>Adinda Thania Salsabilla</li>
-                    <li>Maria Krisanta Simanjuntak</li>
-                    <li>Anggriani Lumban Gaol</li>
-                    <li>Ghina Raudhatul Jannah</li>
-                    <li>Nani Triani</li>
-                    <li>Muhammad Naufal Fitro</li>
-                    <li>Trie Helza Wahyuni</li>
-                    <li>Hernida</li>
-                    <li>Intan Fadhilah</li>
-                    <li>Melisa Febriana</li>
-                    <li>Auliyaa Adzka</li>
-                    <li>Putri Pramudita</li>
-                    <li>Aulia Atika Putri</li>
-                    <li>Yesiva Azahra</li>
-                    <li>Dilla Salsabila</li>
-                    <li>Efal Jovanda Tarigan</li>
-                    <li>Revi Okdayni Asna</li>
-                    <li>Uchie</li>
-                </ul>
+                    <div class="card">
+                        <h3>FIELD COLLECTION</h3>
+                        <span>3 Peserta</span>
+                        <div class="names">
+                            <ul>
+                                <li>Rika Zahera</li>
+                                <li>Roby Andre Pamungkas</li>
+                                <li>Vasco Mario Namara</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>BFA</h3>
+                        <span>3 Peserta</span>
+                        <div class="names">
+                            <ul>
+                                <li>Nisa Safawati</li>
+                                <li>Putri Ayu Mentari</li>
+                                <li>Muhammad Alvira Saputra AB</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>CBA</h3>
+                        <span>2 Peserta</span>
+                        <div class="names">
+                            <ul>
+                                <li>Febby Febriani</li>
+                                <li>Rara Mulyunika</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
 
-        <!-- BFA -->
-        <div class="card">
-            <h3>BFA</h3>
-            <span>28 Peserta</span>
-            <div class="names">
-                <ul>
-                    <li>Diniyah Ramadhanti</li>
-                    <li>Mutia Rifky Ananda</li>
-                    <li>Wafiq Azizah</li>
-                    <li>Sefri Ulfadmi</li>
-                    <li>Finta Kurnia</li>
-                    <li>Lina Nurul Arifah</li>
-                    <li>Angelin H. Grace Situmorang</li>
-                    <li>Widya Rahma Yani</li>
-                    <li>Soniya Yuniarni</li>
-                    <li>Zuriah Hasanah Putri</li>
-                    <li>Suci Advirahmadini</li>
-                    <li>Elva Sitorus</li>
-                    <li>Ira Melani Br. Marpaung</li>
-                    <li>Nurul Addinni</li>
-                    <li>Adinda Maharani</li>
-                    <li>Tasya Nurhayati</li>
-                    <li>Nurul Nabilla</li>
-                    <li>Dede Sunarti</li>
-                    <li>Amanda Hafidza</li>
-                    <li>Riri Raudhatul Azmi</li>
-                    <li>Sri Bunga Wahyu Nengsih</li>
-                    <li>Wulan Safitri</li>
-                    <li>Dini Sakinah</li>
-                    <li>Shasya Malika Zahra</li>
-                    <li>Melia Yunanda</li>
-                    <li>Rahmi Hayati</li>
-                    <li>Sidratul Saddegh Nazief</li>
-                    <li>Yola Sephiana</li>
-                </ul>
+            <!-- ================= RS AWAL BROS ================= -->
+            <div class="rsab-section">
+                <div class="company-title">
+                    <span class="company-line"></span>
+                    <h2>RS AWAL BROS</h2>
+                    <span class="company-line"></span>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <h3>ADMISSION</h3>
+                        <span>1 Peserta</span>
+                        <div class="names">
+                            <ul>
+                                <li>Raja Taufik Hidayat</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- CBA -->
-        <div class="card">
-            <h3>CBA</h3>
-            <span>6 Peserta</span>
-            <div class="names">
-                <ul>
-                    <li>Ervina Agustia Misya</li>
-                    <li>Sri Ayu Ramadhani</li>
-                    <li>Eka Wahyu Ningsih</li>
-                    <li>Wina Salsabila</li>
-                    <li>Tika Kristin Marbun</li>
-                    <li>Anisa Santika</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- FIELD COLLECTION -->
-        <div class="card">
-            <h3>FIELD COLLECTION</h3>
-            <span>4 Peserta</span>
-            <div class="names">
-                <ul>
-                    <li>Muhammad Arief Setiawan</li>
-                    <li>Khairul Amri</li>
-                    <li>Tania Afrina</li>
-                    <li>M.Sabtu Hadi Martasena Ulpani</li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-<!-- ================= RS AWAL BROS ================= -->
-<div class="rsab-section">
-
-    <div class="company-title">
-        <span class="company-line"></span>
-        <h2>RS AWAL BROS</h2>
-        <span class="company-line"></span>
-    </div>
-
-    <div class="cards">
-
-        <!-- ADMISSION -->
-        <div class="card">
-            <h3>ADMISSION</h3>
-            <span>4 Peserta</span>
-            <div class="names">
-                <ul>
-                    <li>Nindi Bunga Iqnas</li>
-                    <li>Muhammad Syafi'i</li>
-                    <li>Isra Mulyani</li>
-                    <li>Nazhifah Al-Adawiyah Tenrisau</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- DISTRIBUSI GIZI -->
-        <div class="card">
-            <h3>DISTRIBUSI GIZI</h3>
-            <span>3 Peserta</span>
-            <div class="names">
-                <ul>
-                    <li>Sri Wulandari</li>
-                    <li>Fayqha Ashifa Irawan</li>
-                    <li>Silviana</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- ADMIN MCU -->
-        <div class="card">
-            <h3>ADMIN MCU</h3>
-            <span>1 Peserta</span>
-            <div class="names">
-                <ul>
-                    <li>Putri Andriani Br Galingging</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- ADMINISTRASI -->
-        <div class="card">
-            <h3>ADMINISTRASI</h3>
-            <span>1 Peserta</span>
-            <div class="names">
-                <ul>
-                    <li>Mutia Andiva</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- NURSE AID -->
-        <div class="card">
-            <h3>NURSE AID</h3>
-            <span>1 Peserta</span>
-            <div class="names">
-                <ul>
-                    <li>Gustira Endani</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-            <!-- FOOTER -->
+            <!-- ================= FOOTER ================= -->
             <div class="footer">
                 © 2026 <strong>PKSS PEKANBARU</strong>
                 – Informasi Kelulusan Walk In Interview
@@ -685,7 +581,7 @@ canvas {
 </main>
 
 <script>
-// ANIMASI PEMBUKA
+/* ================= OPEN ANIMATION ================= */
 const openBtn = document.getElementById("openBtn");
 const intro = document.getElementById("intro");
 const main = document.getElementById("mainContent");
@@ -704,25 +600,27 @@ openBtn.addEventListener("click", () => {
     }, 1200);
 });
 
-// KARTU POSISI: BUKA/TUTUP DAFTAR NAMA
+/* ================= CARD TOGGLE ================= */
 const cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
         const names = card.querySelector(".names");
 
+        // Tutup daftar nama pada kartu lainnya
         document.querySelectorAll(".names").forEach(item => {
             if (item !== names) {
                 item.style.display = "none";
             }
         });
 
+        // Buka atau tutup daftar nama kartu yang dipilih
         names.style.display =
             names.style.display === "block" ? "none" : "block";
     });
 });
 
-// ANIMASI PARTIKEL
+/* ================= PARTICLE CANVAS ================= */
 const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
 
@@ -770,12 +668,12 @@ class Particle {
     }
 }
 
-// MEMBUAT PARTIKEL
+/* Membuat 120 partikel */
 for (let i = 0; i < 120; i++) {
     particles.push(new Particle());
 }
 
-// MENJALANKAN ANIMASI
+/* Menjalankan animasi partikel */
 function animate() {
     ctx.clearRect(
         0,
@@ -791,7 +689,7 @@ function animate() {
 
 animate();
 
-// MENYESUAIKAN UKURAN LAYAR
+/* Menyesuaikan ukuran canvas saat layar berubah */
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
